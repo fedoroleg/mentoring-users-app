@@ -89,6 +89,21 @@
                 </mat-option>
               </mat-autocomplete>
             </mat-form-field>
+
+            <mat-form-field
+              class="edit-user-field"
+              [matTooltip]="vm.user!.name"
+              [matTooltipDisabled]="formGroup.enabled"
+            >
+              <mat-label>Количество сторипоинтов:</mat-label>
+              <input
+                matInput
+                placeholder="Количество сторипоинтов"
+                formControlName="totalStoryPoints"
+                class="edit-user-input"
+              />
+              <mat-error *ngIf="formGroup.hasError('required', 'name')">Это поле обязательно для заполнения</mat-error>
+            </mat-form-field>
           </div>
           <mat-card-actions class="edit-user-btns-container" *ngIf="vm.editMode">
             <button
