@@ -7,3 +7,5 @@ export type DetailUsersCardVm = {
   user: UsersEntity | null;
   errors: UsersErrors | null;
 };
+
+let a = 3;
